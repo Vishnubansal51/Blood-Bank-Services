@@ -1,16 +1,24 @@
 import React from "react";
 // import InputType from './../../components/shared/Form/InputType';
-import Form from './../../components/shared/Form/Form';
+import Form from "./../../components/shared/Form/Form";
+import { useSelector } from "react-redux";
+import Spinner from "../../components/shared/Spinner";
 
 const Login = () => {
+  const { loading, error } = useSelector((state) => state.auth);
+
   return (
     <>
-      <div className="row g-0">
-        <div className="col-md-8 form-banner ">
-          <img src="./assets/images/login_image.jpg" alt="login img" />
-        </div>
-        <div className="col-md-4 form-container">
-          {/* <form> */}
+      {error && <span>{alert(error)}</span>}
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div className="row g-0">
+          <div className="col-md-8 form-banner ">
+            <img src="./assets/images/login_image.jpg" alt="login img" />
+          </div>
+          <div className="col-md-4 form-container">
+            {/* <form> */}
             {/* <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Email address
@@ -42,12 +50,13 @@ const Login = () => {
             </button>
           </form> */}
             <Form
-            formTitle={"Login Page"}
-            submitBtn={"Login"}
-            formType={'login'}
+              formTitle={"Login Page"}
+              submitBtn={"Login"}
+              formType={"login"}
             />
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
