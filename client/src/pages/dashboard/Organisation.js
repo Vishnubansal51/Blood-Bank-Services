@@ -2,25 +2,38 @@ import React, { useEffect, useState } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import API from "../../services/API";
 import moment from "moment";
+import { useSelector } from 'react-redux';
 
 const Organisation = () => {
   const [data, setData] = useState([]);
-
+  const {user} = useSelector(state => state.auth)
   // find org records
   const getOrganisation = async () => {
     try {
-      const { data } = await API.get("/inventory/get-organisation");
-      //   console.log(data);
-      if (data?.success) {
-        setData(data?.ORG);
+      if(user?.role ==='donar'){
+        const { data } = await API.get("/inventory/get-organisation");
+        //   console.log(data);
+        if (data?.success) {
+          setData(data?.ORG);
+        }
+
       }
+      if(user?.role ==='hospital'){
+        const { data } = await API.get("/inventory/get-organisation-hsp");
+        //   console.log(data);
+        if (data?.success) {
+          setData(data?.ORG);
+        }
+
+      }
+
     } catch (error) {
       console.log(error);
     }
   };
   useEffect(() => {
     getOrganisation();
-  }, []);
+  }, [user]);
 
   return (
     <Layout>

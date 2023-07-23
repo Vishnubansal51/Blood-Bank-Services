@@ -9,7 +9,7 @@ module.exports = async (req,res,next) =>{
             if(err){
                 return res.status(401).send({
                     success: false,
-                    message:'Auth Failed'
+                    message:'Auth Failed ho gya'
                 })
             }
             
