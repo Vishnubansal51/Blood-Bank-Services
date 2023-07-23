@@ -6,13 +6,18 @@ export const userMenu= [
     },
     {
         name:'Donar',
-        path:'/',
+        path:'/donar',
         icon:'fa-solid fa-hand-holding-medical',
     },
     {
         name:'Hospital',
-        path:'/',
+        path:'/hospital',
         icon:"fa-regular fa-hospital",
+    },
+    {
+        name:'Organisation',
+        path:'/organisation',
+        icon:"fa-solid fa-sitemap",
     },
 
 ]

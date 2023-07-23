@@ -63,4 +63,11 @@ loader
 }
 
 /* //navbar */
- 
+.navbar {
+  background-color: black !important;
+  color: white !important;
+}
+.nav-link{
+  background-color: black !important;
+  color: white !important;
+}
