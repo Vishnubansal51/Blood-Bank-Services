@@ -2,7 +2,7 @@ const JWT = require('jsonwebtoken');
 
 
 module.exports = async (req,res,next) =>{
-    // jabh tak next call nhi hoga .. hmare kuch nhi call hona wala tabh usko middleware kehta hain
+    // jabh tak next call nhi hoga .. hmare kuch nhi call hona wala tabhI usko middleware kehta hain
     try{
         const token = req.headers["authorization"].split(" ")[1];
         JWT.verify(token,process.env.JWT_SECRET,(err,decode)=>{

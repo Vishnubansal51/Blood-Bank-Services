@@ -30,12 +30,12 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button> */}
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item">
-                <Link className="nav-link active action" aria-current="page" to="#">
+                <Link className="nav-link active action mx-3" aria-current="page" to="/">
                   {" "}
-                  <BiSolidDonateBlood color="red" />
+                  <BiSolidDonateBlood color="red" className="mx-1 font-size: 25px" />
                   Blood Bank- Services
                 </Link>
               </li>
@@ -43,11 +43,11 @@ const Header = () => {
             <div className="nav-bar">
               <ul className="navbar-nav me-auto mb-2 my-1 mb-lg-0">
                 <li className="nav-item mx-2" >
-                  <Link className="nav-link active action"  aria-current="page" to="#">
+                  <Link className="nav-link active action"  aria-current="page" to="/">
                     {" "}
                     <BiSolidUserAccount  />
                     Welcome {user?.name || user?.hospitalName || user?.organisationName}
-                    <span className="badge bg-secondary ms-1 ">{user?.role}</span>
+                    <span className="badge bg-secondary ms-1 text-white bg-">{user?.role}</span>
                   </Link>
                 </li>
                 {
@@ -66,7 +66,7 @@ const Header = () => {
                 )}
 
                 <li>
-                  <button className="btn btn-outline-success mx-3" onClick={handleLogout}>
+                  <button className="btn btn-outline-success mx-3 text-light " onClick={handleLogout}>
                     LogOut
                   </button>
                 </li>

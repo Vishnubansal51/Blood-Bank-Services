@@ -15,9 +15,9 @@ const Login = () => {
       ) : (
         <div className="row g-0">
           <div className="col-md-8 form-banner ">
-            <img src="./assets/images/login_image.jpg" alt="login img" />
+            <img src="./assets/images/logg.jpg" alt="login img" />
           </div>
-          <div className="col-md-4 form-container">
+          <div className="col-md-4 form-container back">
             {/* <form> */}
             {/* <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">

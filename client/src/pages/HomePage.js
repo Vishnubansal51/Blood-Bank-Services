@@ -4,12 +4,13 @@ import Spinner from "../components/shared/Spinner";
 import Layout from "../components/shared/Layout/Layout";
 import Modal from "./../components/shared/modal/Modal";
 import API from "../services/API";
-import moment from 'moment'
+import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-  const { loading, error } = useSelector((state) => state.auth);
+  const { loading, error, user } = useSelector((state) => state.auth);
   const [data, setData] = useState([]);
-
+  const navigate = useNavigate();
   // get function
   const getBloodRecords = async () => {
     try {
@@ -28,6 +29,7 @@ const HomePage = () => {
   }, []);
   return (
     <Layout>
+      {user?.role === "admin" && navigate("/admin")}
       {error && <span>{alert(error)}</span>}
       {loading ? (
         <Spinner />
@@ -51,20 +53,20 @@ const HomePage = () => {
                   <th scope="col">Donar Email</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Time & Date</th>
-                 </tr>
+                </tr>
               </thead>
               <tbody>
                 {/* map to extract data from data */}
-                {data?.map((record)=>(
+                {data?.map((record) => (
                   <tr key={record._id}>
-
                     <td>{record.bloodGroup}</td>
                     <td>{record.inventoryType}</td>
                     <td>{record.email}</td>
                     <td>{record.quantity}(ml)</td>
-                    <td>{moment(record.createdAt).format('DD/MM/YYYY hh:mm:s A')}</td>
+                    <td>
+                      {moment(record.createdAt).format("DD/MM/YYYY hh:mm:s A")}
+                    </td>
                   </tr>
-
                 ))}
               </tbody>
             </table>

@@ -19,7 +19,7 @@ code {
   /* overflow: hidden; */
 }
 .form-banner img{
-  height: fit-content;
+  height:713px;
   width: 100%;
 }
 .form-container{
@@ -27,9 +27,10 @@ code {
   align-items: center;
   justify-content: center;
   min-height: 100vh; 
-
 }
-
+.back{
+  background-color: rgb(177 225 241);
+}
 
 /* 
 loader 
@@ -65,10 +66,19 @@ loader
 
 /* //navbar */
 .navbar {
-  background-color: black !important;
+  background-color:  #164B60!important;
   color: white !important;
 }
 .nav-link{
-  background-color: black !important;
+  background-color: rgb(161 52 52 / 0%)  !important;
   color: white !important;
 }
+
+.action{
+  font-size: 17px;
+}
+
+
+
+
+

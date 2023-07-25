@@ -9,14 +9,14 @@ const Analytics = () => {
   const [inventoryData, setInventoryData] = useState([]);
   const colors = [
     "#461959",
-    "#FBA1B7",
-    "#071952",
+    "#982176",
     "#071952",
     "#1B6B93",
-    "#FFBDF7",
-    "#0E2954",
-    "#9BABB8",
-    "#5C469C",
+    "#071952",
+    "#1B6B93",
+    "#982176",
+    "#461959",
+ 
   ];
   // get blood group data
   const getBloodGroupData = async () => {
@@ -54,10 +54,10 @@ const Analytics = () => {
   return (
     <>
       <Header />
-      <div className="d-flex flex-row flex-wrap">
+      <div className="d-flex flex-row flex-wrap justify-content-center ">
         {data?.map((record, i) => (
           <div
-            className="card m-3 p-2"
+            className="card m-3  p-2"
             key={i}
             style={{ width: "18rem", backgroundColor: `${colors[i]}` }}
           >
@@ -84,8 +84,8 @@ const Analytics = () => {
       </div>
 
       <div className="container  mt-3">
-        <h1 className="my-3">Recent Blood Entries</h1>
-        <table className="table">
+        <h1 className="my-3 mx-4">Recent Blood Entries</h1>
+        <table className="table mx-4">
           <thead>
             <tr>
               <th scope="col">Blood Group</th>
