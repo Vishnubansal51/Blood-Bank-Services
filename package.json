@@ -1,12 +1,11 @@
 {
-  "homepage": "https://github.com/Vishnubansal51/Blood-Bank-Services#readme",
+
   "name": "blood-bank-services",
   "version": "1.0.0",
   "description": "blood-bank-services",
   "main": "server.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
     "client": "npm start --prefix ./client",
@@ -21,6 +20,7 @@
   "bugs": {
     "url": "https://github.com/Vishnubansal51/Blood-Bank-Services/issues"
   },
+  "homepage": "https://github.com/Vishnubansal51/Blood-Bank-Services/server.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
@@ -32,8 +32,5 @@
     "mongoose": "^7.3.4",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1"
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
   }
 }
