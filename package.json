@@ -1,5 +1,4 @@
 {
-
   "name": "blood-bank-services",
   "version": "1.0.0",
   "description": "blood-bank-services",
@@ -20,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Vishnubansal51/Blood-Bank-Services/issues"
   },
-  "homepage": "https://github.com/Vishnubansal51/Blood-Bank-Services/server.js",
+  "homepage": "https://github.com/Vishnubansal51/Blood-Bank-Services#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
